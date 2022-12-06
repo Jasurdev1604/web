@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background: #171836;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.header {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__left {
+  display: flex;
+  align-items: center;
+  gap: 148px;
+}
+.header__left__logo img {
+  width: 100%;
+  height: 100%;
+}
+.header__left__link {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+.header__left__link__li a {
+  font-family: Inter, sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 400;
+  font-size: 14px;
+}
+.header__left__link__li .active {
+  color: #ffffff;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.header__right__select {
+  background: transparent;
+  color: #D1D1D7;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  border: none;
+}
+.header__right__button button {
+  cursor: pointer;
+  color: #FFFFFF;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 30px;
+  border-radius: 6px;
+  border: 2px solid #F5443B;
+  background: #F5443B;
+}
+.header__right__button button:hover {
+  background: transparent;
+}
+.header__bar {
+  display: none;
+  transition: 0.5s;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 8px;
+}
+.header__bar div {
+  width: 30px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 3px;
+}
+
+.bars {
+  gap: 0;
+}
+.bars div:nth-child(2) {
+  opacity: 0;
+}
+.bars div:first-child {
+  transform: translateY(2.5px) rotate(45deg);
+}
+.bars div:last-child {
+  transform: translateY(-2.5px) rotate(-45deg);
+}
+
+@media (max-width: 1199px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    width: 95%;
+  }
+  .header__left {
+    gap: 50px;
+  }
+  .header__left__link {
+    gap: 15px;
+  }
+  .header__right {
+    gap: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .header__left__link {
+    transform: translateX(-120%);
+    transition: 0.3s;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    align-items: flex-start;
+    background: rgba(22, 23, 51, 0.7843137255);
+    width: 65%;
+    height: 100vh;
+  }
+  .header__left__link__li {
+    margin: 10px;
+  }
+  .header__left__link__li a {
+    font-size: 20px;
+  }
+  .header__bar {
+    display: flex;
+  }
+  .toggle {
+    transform: translateX(0);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
