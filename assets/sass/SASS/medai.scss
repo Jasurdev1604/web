@@ -1,6 +1,33 @@
 @media(max-width:1199px){
     .container{
         width: 90%;
+    } 
+    .section{
+        &__right{
+            &__p{
+                font-size: 12px;
+                margin: 10px 0;
+            }
+            &__title{
+                font-size: 35px;
+            }
+            &__form{
+                &__input{
+                    font-size: 12px;
+                    padding: 15px   ;
+                }
+                &__button{
+                    transform: translateX(0);
+                    i{
+                        font-size: 16px;
+                        padding: 5px;
+                    }
+                }
+            }
+            &__bottom{
+                padding: 5px;
+            }
+        }
     }
 }
 @media(max-width:800px){
@@ -18,6 +45,13 @@
             gap: 20px;
         }
     }
+    .section{
+        flex-direction: column-reverse;
+        margin-top: 50px;
+        &__left{
+            display: none;
+        }
+    }
 }
 @media(max-width:600px){
     .header{
@@ -30,9 +64,10 @@
                 top: 0;
                 left: 0;
                 align-items:flex-start;
-                background:#161733c8;
+                background:#161733;
                 width: 65%;
                 height: 100vh;
+                z-index: 99;
                 &__li{
                     margin: 10px;
                     a{

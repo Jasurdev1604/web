@@ -1,5 +1,5 @@
 *{
-    margin: 0;
+    margin: 0; 
     padding: 0;
     box-sizing: border-box;
 }
@@ -106,6 +106,79 @@ body{
     }
     div:last-child{
         transform:translateY(-2.5px)  rotate(-45deg);
+    }
+}
+
+.section{
+    padding: 20px 0;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    &__left{
+        width:100%;
+        &__image{
+            img{
+                width: 100%;
+                height:100%;
+            }
+        }
+    }
+    &__right{
+        &__title{
+            font-family: 'Inter';
+            font-weight: 600;
+            font-size: 45px;
+            color:#FFFFFFCC;
+        }
+        &__p{
+            font-family: 'Inter';
+            font-weight:400;
+            font-size: 18px;
+            color:#FFFFFF66;
+            margin: 10px 0 30px;
+        } 
+        &__form{
+            &__input{
+                background:#1F2143;
+                border:none;
+                border-radius:5px;
+                padding: 18px 200px 18px 25px;  
+                color:#D1D1D7;
+                font-size: 16px;
+            }
+            &__button{
+                cursor: pointer;
+                transform: translateX(-150%);
+                padding: 8px;
+                background:#282B57;
+                border:none;
+                border-radius:5px;
+                i{
+                    font-size: 20px;
+                    color:#9A9CCB;
+                }
+            }
+        }
+        &__bottom{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            &__box{
+                cursor:pointer;
+                color:#9A9CCB99;
+                padding: 8px;
+                border-radius:5px;
+                border:1px solid #9A9CCB;
+                font-family: 'Inter',sans-serif;
+                font-weight: 400;
+                font-size: 13px;
+                &:hover{
+                    background:#9a9ccb7e;
+                    border:1px solid #171836;
+                    color:#171836;
+                }
+            }
+        }
     }
 }
 

@@ -107,9 +107,97 @@ body {
   transform: translateY(-2.5px) rotate(-45deg);
 }
 
+.section {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section__left {
+  width: 100%;
+}
+.section__left__image img {
+  width: 100%;
+  height: 100%;
+}
+.section__right__title {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 45px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.section__right__p {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 10px 0 30px;
+}
+.section__right__form__input {
+  background: #1F2143;
+  border: none;
+  border-radius: 5px;
+  padding: 18px 200px 18px 25px;
+  color: #D1D1D7;
+  font-size: 16px;
+}
+.section__right__form__button {
+  cursor: pointer;
+  transform: translateX(-150%);
+  padding: 8px;
+  background: #282B57;
+  border: none;
+  border-radius: 5px;
+}
+.section__right__form__button i {
+  font-size: 20px;
+  color: #9A9CCB;
+}
+.section__right__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.section__right__bottom__box {
+  cursor: pointer;
+  color: rgba(154, 156, 203, 0.6);
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #9A9CCB;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+}
+.section__right__bottom__box:hover {
+  background: rgba(154, 156, 203, 0.4941176471);
+  border: 1px solid #171836;
+  color: #171836;
+}
+
 @media (max-width: 1199px) {
   .container {
     width: 90%;
+  }
+  .section__right__p {
+    font-size: 12px;
+    margin: 10px 0;
+  }
+  .section__right__title {
+    font-size: 35px;
+  }
+  .section__right__form__input {
+    font-size: 12px;
+    padding: 15px;
+  }
+  .section__right__form__button {
+    transform: translateX(0);
+  }
+  .section__right__form__button i {
+    font-size: 16px;
+    padding: 5px;
+  }
+  .section__right__bottom {
+    padding: 5px;
   }
 }
 @media (max-width: 800px) {
@@ -125,6 +213,13 @@ body {
   .header__right {
     gap: 20px;
   }
+  .section {
+    flex-direction: column-reverse;
+    margin-top: 50px;
+  }
+  .section__left {
+    display: none;
+  }
 }
 @media (max-width: 600px) {
   .header__left__link {
@@ -135,9 +230,10 @@ body {
     top: 0;
     left: 0;
     align-items: flex-start;
-    background: rgba(22, 23, 51, 0.7843137255);
+    background: #161733;
     width: 65%;
     height: 100vh;
+    z-index: 99;
   }
   .header__left__link__li {
     margin: 10px;
